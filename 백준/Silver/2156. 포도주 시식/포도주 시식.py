@@ -15,7 +15,6 @@ if n >= 3:
 
 
 for x in range(4, n+1):
-    dp[x] = max(grapes[x] + grapes[x-1] + dp[x-3], grapes[x] + dp[x-2])
-    dp[x] = max(dp[x], dp[x-1])
+    dp[x] = max(grapes[x] + grapes[x-1] + dp[x-3], grapes[x] + dp[x-2], dp[x-1])
 
 print(dp[n])
